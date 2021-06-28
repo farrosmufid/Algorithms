@@ -5,7 +5,12 @@ package arrays;
 
 public class CommonChars {
 
-    public static String checkCommon(String A, String B) {
+    /*
+        Time: O(n^2)
+        Space: O(n * m)
+    */
+
+    public String solution1Helper(String A, String B) {
         StringBuilder sbA = new StringBuilder(A);
         StringBuilder sbB = new StringBuilder(B);
 
@@ -21,12 +26,12 @@ public class CommonChars {
         return res.toString();
     }
 
-    public static String commonChars(String[] words) {
+    public String solution1(String[] words) {
         String res = "";
         String first = words[0];
 
         for (int i = 1; i < words.length; i++) {
-            res = checkCommon(first, words[i]);
+            res = solution1Helper(first, words[i]);
             first = res;
         }
 
@@ -38,9 +43,11 @@ public class CommonChars {
         String B = "roller";
         String C = "ll";
 
+        CommonChars commonChars = new CommonChars();
+
         String[] words = {A, B, C};
 
-        String res = commonChars(words);
+        String res = commonChars.solution1(words);
         System.out.println(res);
         
     }
