@@ -1,5 +1,7 @@
-import java.util.*;
-import java.io.*;
+package arrays;
+
+//import java.util.*;
+//import java.io.*;
 
 public class CommonChars {
 
