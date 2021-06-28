@@ -2,6 +2,11 @@ package arrays;
 
 public class IslandPerimeter {
 
+    /*
+        Time: O(n^2)
+        Space: O(1)
+    */
+
     public int islandPerimeter(int[][] grid) {
         int count = 0;
         int up, down, left, right;
