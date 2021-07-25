@@ -87,7 +87,7 @@ class Solution {
         while (q.size() > 0) {
             List<String> visited = new ArrayList<>();
             
-            for (int i = q.size() - 1; i >= 0; i--) {
+            for (int i = q.size() - 1; i >= 0 ; i--) {
                 String currWord = q.poll();
                 
                 List<String> neighbors = findNeighbors(currWord, wordSet);
@@ -137,7 +137,7 @@ public class WordLadder2 {
         Solution solution = new Solution();
 
         String beginWord = "hit";
-        String endWord = "log";
+        String endWord = "cog";
 
         List<String> wordList = new ArrayList<>(Arrays.asList("hot","dot","dog","lot","log","cog"));
 
